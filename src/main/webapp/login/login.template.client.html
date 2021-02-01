@@ -2,40 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>
+        Course Manager: Login </title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../styles.css" rel="stylesheet">
-    <link href="./login.style.client.css" rel="stylesheet"/>
+    <link href="../login/login.template.client.css" rel="stylesheet"/>
 </head>
 <body>
 
-<div class="container">
-    <h1 class="color-red">
+<div class="container mt-3">
+    <h1>
         Sign In
     </h1>
 
-    <p>
-        Username    <input class="form-control"/>
-    </p>
+    <div class="mb-3 row mt-3">
+        <label for="username"
+               class="col-sm-2 col-form-label">
+            Username
+        </label>
+        <div class="col-sm-10">
+            <input type="text"
+                   placeholder="Alice"
+                   class="form-control"
+                   id="username"/>
+        </div>
+    </div>
 
-    <p class="color-red">
-        Password    <input class="form-control"/>
-    </p>
+    <div class="mb-3 row">
+        <label for="password"
+               class="col-sm-2 col-form-label">
+            Password
+        </label>
+        <div class="col-sm-10">
+            <input type="password"
+                   placeholder="123qwe#$%"
+                   class="form-control"
+                   id="password">
+        </div>
+    </div>
 
-    <p>
-        <button class="btn btn-primary btn-block">
-            Sign In
-        </button>
-    </p>
+    <div class="mb-3 row">
+        <label for="password"
+               class="col-sm-2 col-form-label">
+        </label>
 
-    <a>
-        Forgot Password
-    </a>
+        <div class="col-sm-10">
+            <a class="btn btn-primary btn-block"
+               href="../profile/profile.template.client.html">
+                Sign In
+            </a>
+        </div>
+    </div>
 
-    <a>
-        Sign Up
-    </a>
+    <div class="mb-3 row">
+        <label for="password"
+               class="col-sm-2 col-form-label">
+        </label>
+        <div class="col-sm-10">
+            <div class="d-flex justify-content-between">
+                <a href="#">
+                    Forgot Password?
+                </a>
+                <a href="../index.html">
+                    Cancel
+                </a>
+                <a href="../register/register.template.client.html">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    </div>
+
 </div>
-
 </body>
 </html>
