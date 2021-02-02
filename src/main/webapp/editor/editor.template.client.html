@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+          integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+          crossorigin="anonymous">
+    <link href="./editor.style.client.css" rel="stylesheet">
+
+    <title>Course Manager</title>
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+     <span class="navbar-brand">
+        <a href="../course-list/course-list.template.client.html" class="btn btn-dark"><i class="fas fa-times"></i></a>
+        <span class="font-weight-bold">CS5610 - WebDev</span>
+    </span>
+
+    <div class="btn-group btn-group-lg mr-auto" role="group" aria-label="Widgets">
+        <button type="button" class="btn btn-dark">Build</button>
+        <button type="button" class="btn btn-dark">Pages</button>
+        <button type="button" class="btn btn-dark">Theme</button>
+        <button type="button" class="btn btn-dark">Store</button>
+        <button type="button" class="btn btn-dark">Apps</button>
+        <button type="button" class="btn btn-dark">Settings</button>
+        <button type="button" class="btn btn-dark"><i class="fa fa-plus"></i></i></button>
+    </div>
+
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 bg-dark editor-modules">
+            <ul class="list-group">
+                <li class="list-group-item editor-list" >Module 1 - JQuery <i
+                        class="float-right fas fa-times"></i></li>
+                <li class="list-group-item editor-list active">Module 2 - React <i
+                        class="float-right fas fa-times"></i></li>
+                <li class="list-group-item editor-list">Module 3 - Redux <i
+                        class="float-right fas fa-times"></i></li>
+                <li class="list-group-item editor-list">Module 4 - Native <i
+                        class="float-right fas fa-times"></i></li>
+                <li class="list-group-item editor-list">Module 5 - Angular <i
+                        class="float-right fas fa-times"></i></li>
+                <li class="list-group-item editor-list">Module 6 - Node <i
+                        class="float-right fas fa-times"></i></li>
+                <li class="list-group-item editor-list">Module 7 - Mongo <i
+                        class="float-right fas fa-times"></i></li>
+            </ul>
+            <a href="#" class="btn btn-dark float-right"><i class="fas fa-plus"></i></a>
+        </div>
+
+        <div class="col-8 px-4 py-4">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item editor-topics">
+                    <a class="nav-link active bg-dark" href="#">Topic 1</a>
+                </li>
+                <li class="nav-item editor-topics">
+                    <a class="nav-link" href="#">Topic 2</a>
+                </li>
+                <li class="nav-item editor-topics">
+                    <a class="nav-link" href="#">Topic 3</a>
+                </li>
+
+                <a href="#" class="btn btn-dark editor-topics"><i class="fas fa-plus"></i></a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
