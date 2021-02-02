@@ -14,9 +14,10 @@
   td:nth-child(2) {
     display:none;
   }
+}
 
+@media only screen and (max-width: 768px) {
   td:nth-child(3) {
     display:none;
   }
-
 }
