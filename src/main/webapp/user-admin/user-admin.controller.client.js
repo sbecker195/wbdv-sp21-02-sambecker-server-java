@@ -25,6 +25,14 @@
         findAllUsers()
     }
 
+    function clearFields() {
+            $usernameFld.val('')
+            $passwordFld.val('')
+            $firstNameFld.val('')
+            $lastNameFld.val('')
+            $roleFld.val('FACULTY')
+    }
+
     function createUser() {
         const newUser = {
             username: $usernameFld.val(),
@@ -37,11 +45,7 @@
             users.push(serverUser);
             renderUsers(users);
         })
-        $usernameFld.val('')
-        $passwordFld.val('')
-        $firstNameFld.val('')
-        $lastNameFld.val('')
-        $roleFld.val('FACULTY')
+        clearFields();
     }
 
     function deleteUser(event) {
@@ -75,11 +79,7 @@
             userService.updateUser(currentUser._id, currentUser).then(() => {
                 renderUsers(users);
                 currentUser = null;
-                $usernameFld.val('')
-                $passwordFld.val('')
-                $firstNameFld.val('')
-                $lastNameFld.val('')
-                $roleFld.val('FACULTY')
+                clearFields();
             });
         } else {
             alert('Must select a user.')
