@@ -2,7 +2,7 @@ package com.example.wbdvsp2102sambeckerserverjava.models;
 
 public class Widget {
   private String name;
-  private Integer id;
+  private Long id;
   private String type;
   private Integer widgetOrder;
   private String text;
@@ -13,6 +13,24 @@ public class Widget {
   private String cssClass;
   private String style;
   private String value;
+
+  public Widget(Long id, String topicId, String type, Integer size, String text, String name,
+                Integer widgetOrder, String url, Integer width, Integer height, String cssClass,
+                String style, String value) {
+    this.id = id;
+    this.topicId = topicId;
+    this.type = type;
+    this.size = size;
+    this.text = text;
+    this.name = name;
+    this.widgetOrder = widgetOrder;
+    this.url = url;
+    this.height = height;
+    this.width = width;
+    this.cssClass = cssClass;
+    this.style = style;
+    this.value = value;
+  }
 
   public String getName() {
     return name;
@@ -32,11 +50,11 @@ public class Widget {
 
   private String topicId;
 
-  public Integer getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
@@ -117,24 +135,6 @@ public class Widget {
   }
 
   public void setValue(String value) {
-    this.value = value;
-  }
-
-  public Widget(Integer id, String topicId, String type, Integer size, String text, String name,
-                Integer widgetOrder, String url, Integer width, Integer height, String cssClass,
-                String style, String value) {
-    this.id = id;
-    this.topicId = topicId;
-    this.type = type;
-    this.size = size;
-    this.text = text;
-    this.name = name;
-    this.widgetOrder = widgetOrder;
-    this.url = url;
-    this.height = height;
-    this.width = width;
-    this.cssClass = cssClass;
-    this.style = style;
     this.value = value;
   }
 }

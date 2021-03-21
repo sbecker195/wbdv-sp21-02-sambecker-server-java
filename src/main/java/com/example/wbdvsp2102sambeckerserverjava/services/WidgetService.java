@@ -12,9 +12,9 @@ public class WidgetService {
   private final List<Widget> widgets = new ArrayList<Widget>();
 
   // implement crud operations
-  // tid changed to String per spec
   public Widget createWidget(String tid, Widget widget) {
-    Integer id = Math.toIntExact((new Date()).getTime());
+    widget.setTopicId(tid);
+    Long id = ((new Date()).getTime());
     widget.setId(id);
     widgets.add(widget);
     return widget;
@@ -30,21 +30,21 @@ public class WidgetService {
     return ws;
   }
 
-  public Integer updateWidget(String id, Widget newWidget) {
+  public Integer updateWidget(Long id, Widget newWidget) {
     for(int i=0; i<widgets.size(); i++) {
       Widget w = widgets.get(i);
-      if(w.getId().equals(Integer.parseInt(id))) {
+      if(w.getId().equals(id)) {
         widgets.set(i, newWidget);
         return 1;
       }
     }
     return -1;
   }
-  public Integer deleteWidget(String id) {
+  public Integer deleteWidget(Long id) {
     int index = -1;
     for(int i=0; i<widgets.size(); i++) {
       Widget w = widgets.get(i);
-      if(w.getId().equals(Integer.parseInt(id))) {
+      if(w.getId().equals(id)) {
         index = i;
       }
     }
