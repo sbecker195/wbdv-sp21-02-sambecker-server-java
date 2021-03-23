@@ -30,21 +30,21 @@ public class WidgetService {
     return ws;
   }
 
-  public Integer updateWidget(Long id, Widget newWidget) {
+  public Integer updateWidget(String id, Widget newWidget) {
     for(int i=0; i<widgets.size(); i++) {
       Widget w = widgets.get(i);
-      if(w.getId().equals(id)) {
+      if(w.getId().equals(Integer.parseInt(id))) {
         widgets.set(i, newWidget);
         return 1;
       }
     }
     return -1;
   }
-  public Integer deleteWidget(Long id) {
+  public Integer deleteWidget(String id) {
     int index = -1;
     for(int i=0; i<widgets.size(); i++) {
       Widget w = widgets.get(i);
-      if(w.getId().equals(id)) {
+      if(w.getId().equals(Integer.parseInt(id))) {
         index = i;
       }
     }
