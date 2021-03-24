@@ -14,7 +14,7 @@ public class WidgetService {
   // implement crud operations
   public Widget createWidget(String tid, Widget widget) {
     widget.setTopicId(tid);
-    Long id = ((new Date()).getTime());
+    Integer id = (int)((new Date()).getTime());
     widget.setId(id);
     widgets.add(widget);
     return widget;
