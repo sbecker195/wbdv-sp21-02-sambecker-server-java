@@ -2,7 +2,7 @@ package com.example.wbdvsp2102sambeckerserverjava.models;
 
 public class Widget {
   private String name;
-  private Long id;
+  private Integer id;
   private String type;
   private Integer widgetOrder;
   private String text;
@@ -14,7 +14,7 @@ public class Widget {
   private String style;
   private String value;
 
-  public Widget(Long id, String topicId, String type, Integer size, String text, String name,
+  public Widget(Integer id, String topicId, String type, Integer size, String text, String name,
                 Integer widgetOrder, String url, Integer width, Integer height, String cssClass,
                 String style, String value) {
     this.id = id;
@@ -50,11 +50,11 @@ public class Widget {
 
   private String topicId;
 
-  public Long getId() {
+  public Integer getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(Integer id) {
     this.id = id;
   }
 

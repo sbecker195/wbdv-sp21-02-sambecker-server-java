@@ -33,7 +33,7 @@ public class WidgetService {
   public Integer updateWidget(String id, Widget newWidget) {
     for(int i=0; i<widgets.size(); i++) {
       Widget w = widgets.get(i);
-      if(w.getId().equals(id)) {
+      if(w.getId().equals(Integer.parseInt(id))) {
         widgets.set(i, newWidget);
         return 1;
       }
@@ -44,7 +44,7 @@ public class WidgetService {
     int index = -1;
     for(int i=0; i<widgets.size(); i++) {
       Widget w = widgets.get(i);
-      if(w.getId().equals(id)) {
+      if(w.getId().equals(Integer.parseInt(id))) {
         index = i;
       }
     }
