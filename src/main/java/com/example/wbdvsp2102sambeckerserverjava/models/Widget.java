@@ -1,21 +1,31 @@
 package com.example.wbdvsp2102sambeckerserverjava.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="widgets")
 public class Widget {
-  private String name;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
+  private String topicId;
+  private String name;
   private String type;
   private Integer widgetOrder;
   private String text;
   private Integer size;
   private String url;
+  private String src;
   private Integer width;
   private Integer height;
   private String cssClass;
   private String style;
   private String value;
+  private Boolean isOrdered;
+
 
   public Widget(Integer id, String topicId, String type, Integer size, String text, String name,
-                Integer widgetOrder, String url, Integer width, Integer height, String cssClass,
+                Integer widgetOrder, String url, String src, Integer width, Integer height, String cssClass,
                 String style, String value) {
     this.id = id;
     this.topicId = topicId;
@@ -25,11 +35,24 @@ public class Widget {
     this.name = name;
     this.widgetOrder = widgetOrder;
     this.url = url;
+    this.src = src;
     this.height = height;
     this.width = width;
     this.cssClass = cssClass;
     this.style = style;
     this.value = value;
+    this.isOrdered = false;
+  }
+
+  public Widget() {
+  }
+
+  public Boolean getIsOrdered() {
+    return isOrdered;
+  }
+
+  public void setIsOrdered(Boolean isOrdered) {
+    this.isOrdered = isOrdered;
   }
 
   public String getName() {
@@ -47,8 +70,6 @@ public class Widget {
   public void setTopicId(String topicId) {
     this.topicId = topicId;
   }
-
-  private String topicId;
 
   public Integer getId() {
     return id;
@@ -96,6 +117,14 @@ public class Widget {
 
   public void setUrl(String url) {
     this.url = url;
+  }
+
+  public String getSrc() {
+    return src;
+  }
+
+  public void setSrc(String src) {
+    this.src = src;
   }
 
   public Integer getHeight() {
