@@ -27,7 +27,7 @@ public class WidgetService {
     return repository.findWidgetsForTopic(topicId);
   }
 
-  public Integer updateWidget(Integer id, Widget widget) {
+  public Integer updateWidget(String id, Widget widget) {
     Widget originalWidget = findWidgetById(id);
     if (widget.getTopicId() != null) {
       originalWidget.setTopicId(widget.getTopicId());
@@ -60,7 +60,8 @@ public class WidgetService {
     return 1;
   }
 
-  public Integer deleteWidget(Integer id) {
+  public Integer deleteWidget(String wid) {
+    int id = Integer.parseInt(wid);
     repository.deleteById(id);
     return 1;
   }
@@ -69,7 +70,8 @@ public class WidgetService {
     return (List<Widget>) repository.findAll();
   }
 
-  public Widget findWidgetById(Integer id) {
+  public Widget findWidgetById(String wid) {
+    int id = Integer.parseInt(wid);
     Optional<Widget> widget = repository.findById(id);
     return widget.orElse(null);
   }
